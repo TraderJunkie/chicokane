@@ -6,7 +6,7 @@ import PasswordGate from "@/components/PasswordGate";
 
 const Index = () => {
   return (
-    <PasswordGate password="Cryptonative2019">
+    <PasswordGate password="Deving2024">
       <div className="min-h-screen bg-background">
         <HeroSection />
         <AboutSection />
