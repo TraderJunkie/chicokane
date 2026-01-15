@@ -19,7 +19,7 @@ const StreamSection = () => {
     {
       name: "Instagram",
       subtitle: "Follow",
-      url: "https://www.instagram.com/chico__kane",
+      url: "https://www.instagram.com/chico__kane?igsh=Mjl5a20yanIwbXIy",
       icon: Instagram,
       primary: false,
     },
