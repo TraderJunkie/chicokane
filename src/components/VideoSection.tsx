@@ -1,9 +1,20 @@
 import { Play } from "lucide-react";
-import { useState } from "react";
 
 const VideoSection = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = "DKUQFEKG6F8";
+  const loudArmyUrl = "https://app.loud.army/stream/terence?utm_source=ig&utm_medium=social&utm_content=link_in_bio";
+  
+  const videos = [
+    {
+      id: "m7irTA-LJtk",
+      title: "Latest Release",
+      featured: true,
+    },
+    {
+      id: "DKUQFEKG6F8",
+      title: "Featured Video",
+      featured: false,
+    },
+  ];
 
   return (
     <section id="video" className="py-32 px-6 bg-background relative overflow-hidden">
@@ -15,52 +26,73 @@ const VideoSection = () => {
         <div className="text-center mb-16">
           <span className="text-gold text-xs tracking-[0.3em] uppercase font-light">Watch</span>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mt-4">
-            Featured Video
+            Videos
           </h2>
         </div>
 
-        {/* Video container - Cinematic aspect ratio */}
-        <div className="relative aspect-video bg-secondary rounded-lg overflow-hidden border border-border group">
-          {!isPlaying ? (
-            <>
-              {/* Thumbnail with play overlay */}
+        {/* Video grid - Similar to songs layout */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {videos.map((video) => (
+            <a
+              key={video.id}
+              href={loudArmyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group relative aspect-video rounded-lg overflow-hidden border transition-all duration-500 ${
+                video.featured
+                  ? "bg-gold/10 border-gold md:col-span-2"
+                  : "bg-secondary border-border hover:border-gold"
+              }`}
+            >
+              {/* Thumbnail */}
               <img
-                src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                alt="Video thumbnail"
-                className="w-full h-full object-cover"
+                src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                alt={video.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-all duration-500" />
+              <div className={`absolute inset-0 transition-all duration-500 ${
+                video.featured 
+                  ? "bg-background/30 group-hover:bg-background/10" 
+                  : "bg-background/50 group-hover:bg-background/30"
+              }`} />
               
               {/* Play button */}
-              <button
-                onClick={() => setIsPlaying(true)}
-                className="absolute inset-0 flex items-center justify-center"
-              >
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-gold/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
-                  <Play className="w-8 h-8 md:w-10 md:h-10 text-foreground ml-1" fill="currentColor" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className={`flex items-center justify-center rounded-full transition-all duration-500 group-hover:scale-110 shadow-2xl ${
+                  video.featured 
+                    ? "w-20 h-20 md:w-24 md:h-24 bg-gold" 
+                    : "w-16 h-16 md:w-20 md:h-20 bg-gold/90"
+                }`}>
+                  <Play className={`text-foreground ml-1 ${
+                    video.featured ? "w-8 h-8 md:w-10 md:h-10" : "w-6 h-6 md:w-8 md:h-8"
+                  }`} fill="currentColor" />
                 </div>
-              </button>
+              </div>
               
-              {/* Film strip decoration */}
-              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-gold/0 via-gold/50 to-gold/0" />
-            </>
-          ) : (
-            <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-              title="Chico Kane Video"
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          )}
+              {/* Title overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent">
+                <p className={`font-semibold text-foreground ${video.featured ? "text-lg" : "text-base"}`}>
+                  {video.title}
+                </p>
+                {video.featured && (
+                  <span className="text-gold text-xs tracking-wider uppercase">Featured</span>
+                )}
+              </div>
+              
+              {/* Film strip decoration for featured */}
+              {video.featured && (
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold/0 via-gold to-gold/0" />
+              )}
+            </a>
+          ))}
         </div>
 
         {/* Video info */}
         <div className="mt-8 text-center">
           <p className="text-muted-foreground text-lg">
-            Experience the energy and authenticity of Chico Kane
+            Click to stream on Loud Army
           </p>
         </div>
       </div>
