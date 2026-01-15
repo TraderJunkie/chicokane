@@ -26,7 +26,7 @@ const StreamSection = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-background relative">
+    <section id="music" className="py-32 px-6 bg-background relative">
       {/* Cinematic lighting effect */}
       <div className="absolute inset-0 bg-gradient-to-t from-gold/5 via-transparent to-transparent pointer-events-none" />
       

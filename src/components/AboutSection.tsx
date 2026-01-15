@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section className="py-32 px-6 bg-secondary relative overflow-hidden">
+    <section id="about" className="py-32 px-6 bg-secondary relative overflow-hidden">
       {/* Cinematic side accent */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gold to-transparent" />
       
