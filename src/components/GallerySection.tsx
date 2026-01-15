@@ -1,12 +1,10 @@
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
-import gallery4 from "@/assets/gallery-4.jpeg";
 
 const GallerySection = () => {
   const photos = [
     { src: gallery1, alt: "Chico Kane portrait" },
     { src: gallery2, alt: "Chico Kane in the studio" },
-    { src: gallery4, alt: "Chico Kane with the crew" },
   ];
 
   return (
