@@ -2,7 +2,7 @@ import { Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden pt-16">
       {/* Cinematic dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       
