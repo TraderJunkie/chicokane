@@ -11,11 +11,6 @@ const VideoSection = () => {
       featured: true,
     },
     {
-      id: "DKUQFEKG6F8",
-      title: "Official Music Video",
-      featured: false,
-    },
-    {
       id: "fm5RHmfuyJo",
       title: "Life in the Community",
       featured: false,
