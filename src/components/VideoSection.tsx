@@ -11,11 +11,19 @@ const VideoSection = () => {
       featured: true,
     },
     {
+      id: "DKUQFEKG6F8",
+      title: "Official Music Video",
+      featured: false,
+    },
+    {
       id: "fm5RHmfuyJo",
       title: "Life in the Community",
       featured: false,
     },
   ];
+
+  // Cache-busting timestamp
+  const cacheBuster = Date.now();
 
   return (
     <>
@@ -46,7 +54,7 @@ const VideoSection = () => {
               >
                 {/* Thumbnail */}
                 <img
-                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg?t=${cacheBuster}`}
                   alt={video.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
