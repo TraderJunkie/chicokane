@@ -25,7 +25,7 @@ const HeroSection = () => {
         
         {/* Tagline - Cinematic subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide mb-12 max-w-xl mx-auto">
-          Healing youth through music. Raw. Reflective. Real.
+          Healing youth through music. Raw Expression. Reflective Lyrics. Authentic Storytelling.
         </p>
         
         {/* CTA - Movie trailer play button style */}
