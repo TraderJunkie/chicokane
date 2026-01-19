@@ -35,8 +35,8 @@ const VideoSection = () => {
           {/* Section header */}
           <div className="text-center mb-16">
             <span className="text-gold text-xs tracking-[0.3em] uppercase font-light">Watch</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground mt-4">
-              Videos
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mt-4">
+              Raw Expression. Reflective Lyrics. Authentic Storytelling.
             </h2>
           </div>
 
