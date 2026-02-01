@@ -1,73 +1,37 @@
-# Welcome to your Lovable project
+Chico Kane
 
-## Project info
+Chico Kane is a rising musical artist known for energy driven releases and authentic storytelling through rhythm and lyricism. His work blends emotional depth with community-focused expression, and he’s quickly building momentum across independent music platforms.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+About
 
-## How can I edit this code?
+Chico Kane creates music that’s rooted in real experience, capturing mood, resilience, and raw honesty. His catalog spans thoughtful singles like “MEDITATION IS KEY”, “HAFFI KNOW”, “NOT WITH THIS TEAM” and the 2025 release “SPILLIN MY TRUTH (Radio Edit)” each showcasing his evolving sound and connection to listeners.
 
-There are several ways of editing your application.
+Music
 
-**Use Lovable**
+Notable releases include:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+SPILLIN MY TRUTH (Radio Edit) – 2025
 
-Changes made via Lovable will be committed automatically to this repo.
+NOT WITH THIS TEAM – 2024
 
-**Use your preferred IDE**
+HAFFI KNOW – earlier single
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+MEDITATION IS KEY - foundational track
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Chico’s tracks are available for streaming across major platforms, connecting with fans through true to life narratives and a signature voice that stands out in independent music circles.
 
-Follow these steps:
+Artistic Identity
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Chico Kane’s artistry isn’t just about music it’s about community, presence, and cultural voice. His work reflects the experiences of his community and resonates with audiences looking for genuine expression. His growth as an artist mirrors his dedication to craft, presence in his scene, and ongoing commitment to evolving his sound.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+What to Expect
 
-# Step 3: Install the necessary dependencies.
-npm i
+Authentic storytelling
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Energetic performance and vibe
 
-**Edit a file directly in GitHub**
+Growth driven musical evolution
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Music rooted in lived experience
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Chico Kane represents a new generation of independent artists who build influence not just through sound, but through connection and impact.
