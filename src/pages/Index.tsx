@@ -5,6 +5,7 @@ import GallerySection from "@/components/GallerySection";
 import StreamSection from "@/components/StreamSection";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 const Index = () => {
   return (
