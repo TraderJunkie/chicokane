@@ -10,6 +10,7 @@ import BackgroundMusic from "@/components/BackgroundMusic";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <BackgroundMusic />
       <Navbar />
       <HeroSection />
       <AboutSection />
