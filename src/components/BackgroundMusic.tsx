@@ -36,12 +36,12 @@ const BackgroundMusic = () => {
   return (
     <>
       <audio ref={audioRef} src="/audio/Free_mind.mpeg" loop />
-      <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-3 py-2 shadow-lg">
-        <button onClick={rewind} className="p-1.5 rounded-full hover:bg-muted transition-colors" aria-label="Rewind">
-          <RotateCcw className="w-4 h-4 text-foreground" />
+      <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-3 py-2 sm:px-3 sm:py-2 shadow-lg">
+        <button onClick={rewind} className="p-2.5 sm:p-1.5 rounded-full hover:bg-muted active:bg-muted transition-colors touch-manipulation" aria-label="Rewind">
+          <RotateCcw className="w-5 h-5 sm:w-4 sm:h-4 text-foreground" />
         </button>
-        <button onClick={togglePlay} className="p-1.5 rounded-full hover:bg-muted transition-colors" aria-label={isPlaying ? "Pause" : "Play"}>
-          {isPlaying ? <Pause className="w-4 h-4 text-foreground" /> : <Play className="w-4 h-4 text-foreground" />}
+        <button onClick={togglePlay} className="p-2.5 sm:p-1.5 rounded-full hover:bg-muted active:bg-muted transition-colors touch-manipulation" aria-label={isPlaying ? "Pause" : "Play"}>
+          {isPlaying ? <Pause className="w-5 h-5 sm:w-4 sm:h-4 text-foreground" /> : <Play className="w-5 h-5 sm:w-4 sm:h-4 text-foreground" />}
         </button>
       </div>
     </>
