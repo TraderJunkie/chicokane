@@ -8,27 +8,43 @@ const BackgroundMusic = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
+
     audio.volume = 0.3;
 
-    const attemptAutoplay = async () => {
+    const tryPlay = async () => {
       try {
         await audio.play();
         setIsPlaying(true);
       } catch {
-        // Autoplay blocked — wait for any user interaction then play
-        const playOnInteraction = () => {
-          audio.play().then(() => {
-            setIsPlaying(true);
-          }).catch(() => {});
-          document.removeEventListener("click", playOnInteraction);
-          document.removeEventListener("touchstart", playOnInteraction);
-        };
-        document.addEventListener("click", playOnInteraction, { once: true });
-        document.addEventListener("touchstart", playOnInteraction, { once: true });
+        // Wait for explicit user gesture on mobile/desktop
       }
     };
 
-    attemptAutoplay();
+    const unlockAndPlay = () => {
+      audio.muted = false;
+      audio.load();
+      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+    };
+
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+
+    document.addEventListener("pointerdown", unlockAndPlay, { once: true });
+    document.addEventListener("touchstart", unlockAndPlay, { once: true });
+    document.addEventListener("click", unlockAndPlay, { once: true });
+
+    tryPlay();
+
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      document.removeEventListener("pointerdown", unlockAndPlay);
+      document.removeEventListener("touchstart", unlockAndPlay);
+      document.removeEventListener("click", unlockAndPlay);
+    };
   }, []);
 
   const togglePlay = () => {
@@ -55,7 +71,10 @@ const BackgroundMusic = () => {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/Free_mind.mpeg" loop preload="auto" />
+      <audio ref={audioRef} loop preload="auto" playsInline>
+        <source src="/audio/Free_mind.mp3" type="audio/mpeg" />
+        <source src="/audio/Free_mind.mpeg" type="audio/mpeg" />
+      </audio>
       <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm border border-border rounded-full px-3 py-2 sm:px-3 sm:py-2 shadow-lg">
         <button onClick={rewind} className="p-2.5 sm:p-1.5 rounded-full hover:bg-muted active:bg-muted transition-colors touch-manipulation" aria-label="Rewind">
           <RotateCcw className="w-5 h-5 sm:w-4 sm:h-4 text-foreground" />
